@@ -1,0 +1,327 @@
+@import "variables";
+@import "bootstrap";
+
+.titulo_servicio{
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.servicios{
+  margin-bottom: 1em;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.servicio {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h2 {
+    font-size: 1em;
+    margin-top: 0.5em;
+    background-color: $white;
+  }
+  width: 45%;
+  height: 50%;
+  img {
+    max-height: 200px;
+    max-width: 200px;
+    height: 100%;
+    width: 100%;
+  }
+  margin-bottom: 0.5em;
+}
+
+.subdivision {
+  h2 {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+}
+
+#accordion{
+  ul{
+    padding-left: 0;
+  }
+}
+
+.card {
+  margin: 0.5em 1em;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  .arrow {
+    font-size: 2em !important;
+  }
+  h4{
+    margin-bottom: 0;
+  }
+}
+
+
+.down{
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.tratamiento{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 1em;
+  h5{
+    margin-top: 1em;
+  }
+  img {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.detalles{
+  margin: 1em 0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.divide-servicios{
+  margin: 0 1em;
+  border-top: 1px solid #000000;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .titulo_servicio{
+    margin-top: 1em;
+  }
+
+  .servicio {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 45%;
+    h2 {
+      font-size: 1em;
+      margin-top: 0.5em;
+      background-color: $white;
+    }
+    margin-bottom: 0.5em;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .titulo_servicio{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding: 0.5em 0;
+  }
+
+  .titulo_servicio,
+  .servicios,
+  .servicio-wrapper{
+    background-color: white;
+    ul{
+      margin: 0;
+      padding-bottom:1px;
+
+    }
+  }
+
+
+
+  .servicio-wrapper{
+    margin-top: 1em;
+  }
+  .servicio-wrapper{
+    h1{
+      margin-left: 0.6em;
+      padding-top: 0.4em;
+    }
+  }
+  .servicio {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 45%;
+    h2 {
+      font-size: 1em;
+      margin-top: 0.5em;
+      background-color: $white;
+    }
+    margin-bottom: 0.5em;
+  }
+  .sv{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em 1em;
+    padding-bottom: 0;
+    margin: 20px 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    &.reverso{
+      flex-direction: row-reverse;
+      .details :nth-child(1) { order: 2; }
+      .details :nth-child(2) { order: 3; }
+      .details :nth-child(3) { order: 1; }
+      .details {
+        justify-content: flex-start;
+        .agenda{
+          margin-right: 1em;
+        }
+        .tiempo{
+          margin-right: 1em;
+        }
+      }
+      .des{
+        margin-left: 0;
+      }
+    }
+  }
+  .sv-img{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 18%;
+    img{
+      min-height: 100px;
+      border-radius: 20px;
+    }
+    h2{
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
+
+  .sv-des{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: 10px;
+  }
+  .des{
+    h2{
+      font-size: 1.5em;
+    }
+    p{
+      margin: 0;
+    }
+    margin-left: 1em;
+    height: 50%;
+  }
+  .details{
+    margin-top: 0.5em;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    width: 100%;
+    i{
+      font-size: 1.5em;
+    }
+    h3{
+      font-size: 1.2em;
+      margin: 0;
+    }
+    .precio{
+      margin-right: 1em;
+    }
+    .tiempo{
+      margin-right: 1em;
+    }
+  }
+  .tiempo{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    i{
+      margin-right: 0.2em;
+    }
+  }
+  .precio{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .agenda{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .servicios{
+    justify-content: space-around;
+  }
+  .servicios :nth-child(4) { margin-right: -6em}
+  .servicios :nth-child(5) { margin-left: -6em }
+  .servicio {
+    width: 33%;
+    img {
+      height: 80%;
+      width: 80%;
+    }
+  }
+  .des{
+    p{
+      font-size: 1.1em;
+    }
+  }
+  .details{
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    .precio{
+      margin-right: 1em;
+    }
+    .tiempo{
+      margin-right: 1em;
+    }
+    i{
+      font-size: 1.5em;
+    }
+    h3{
+      font-size: 1.5em;
+      margin: 0;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
